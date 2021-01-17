@@ -1,3 +1,4 @@
+from django.contrib.postgres.fields import DateTimeRangeField
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -28,7 +29,6 @@ class Seat(models.Model):
     position = models.PositiveSmallIntegerField(_('position'))
     row_number = models.PositiveSmallIntegerField(_('row number'))
     seat_number = models.PositiveSmallIntegerField(_('seat number'))
-    is_available = models.BooleanField(_('is available'), default=True)
 
     class Meta:
         verbose_name = _("Seat")
@@ -43,7 +43,7 @@ class Match(models.Model):
     updated_time = models.DateTimeField(_('updated time'), auto_now=True)
     is_enable = models.BooleanField(_('is enable'), default=True)
     title = models.CharField(_('title'), max_length=80)
-    execute_time = models.DateTimeField(_('execute date'))
+    execute_time_range = DateTimeRangeField(_('execute time range'))
     stadium = models.ForeignKey('Stadium', verbose_name=_('stadium'), on_delete=models.CASCADE, related_name='matches')
 
     class Meta:

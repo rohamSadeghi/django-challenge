@@ -12,16 +12,16 @@ class StadiumAdmin(admin.ModelAdmin):
 
 @admin.register(Seat)
 class SeatAdmin(admin.ModelAdmin):
-    list_display = ["stadium", "price", "price_discount", "is_enable", "is_available", "created_time"]
+    list_display = ["stadium", "price", "price_discount", "is_enable", "created_time"]
     search_fields = ('stadium__name', )
-    list_filter = ['is_enable', 'is_available', 'stadium']
+    list_filter = ['is_enable', 'stadium']
     autocomplete_fields = ('stadium', )
     list_select_related = ['stadium', ]
 
 
 @admin.register(Match)
 class MatchAdmin(admin.ModelAdmin):
-    list_display = ["stadium", "title", "execute_time", "is_enable", "created_time"]
+    list_display = ["stadium", "title", "execute_time_range", "is_enable", "created_time"]
     search_fields = ('title', )
     list_filter = ['is_enable', 'stadium']
     autocomplete_fields = ('stadium', )
