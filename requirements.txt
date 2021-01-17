@@ -1,0 +1,8 @@
+Django==3.1.5
+djangorestframework==3.12.2
+djangorestframework-simplejwt
+django-rest-swagger
+python-decouple
+python-memcached
+psycopg2-binary
+requests
