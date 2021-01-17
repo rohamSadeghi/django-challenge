@@ -37,6 +37,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 INSTALLED_APPS = [
     # Local
     'accounts',
+    'stadiums',
 
     # Third parties
     'rest_framework',
