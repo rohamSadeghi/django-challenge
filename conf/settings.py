@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     # Local
     'accounts',
     'stadiums',
+    'transactions',
 
     # Third parties
     'rest_framework',
