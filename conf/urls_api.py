@@ -5,6 +5,7 @@ schema_view = get_swagger_view(title="HAMI BOURSE APIs")
 
 urlpatterns = [
     path('v1/accounts/', include("accounts.api.urls")),
+    path('v1/stadiums/', include("stadiums.api.urls")),
 
 
     path('v1/docs/', schema_view),
