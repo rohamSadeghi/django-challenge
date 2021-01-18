@@ -4,5 +4,6 @@ djangorestframework-simplejwt
 django-rest-swagger
 python-decouple
 python-memcached
+PyJWT==1.7.1
 psycopg2-binary
 requests
