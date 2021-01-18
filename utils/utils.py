@@ -6,6 +6,12 @@ logger = logging.getLogger('accounts')
 
 
 def send_msg(phone_number, message):
+    """
+    This function will send message to specific phone number
+    :param phone_number: phone number which is a destination of message
+    :param message: message text that will be send to specific phone number
+    :return: True after the job is done
+    """
     data = {
         "data": [
             {
