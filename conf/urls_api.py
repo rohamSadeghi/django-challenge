@@ -1,7 +1,7 @@
 from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
 
-schema_view = get_swagger_view(title="HAMI BOURSE APIs")
+schema_view = get_swagger_view(title="TICKET ONLINE APIs")
 
 urlpatterns = [
     path('v1/accounts/', include("accounts.api.urls")),
