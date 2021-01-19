@@ -26,7 +26,7 @@ class MatchSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         seat_id = validated_data['seat_id']
         match = validated_data['match']
-        seat = get_object_or_404(Seat, **{'id': seat_id, 'stadium': match.stadium})
+        seat = get_object_or_404(Seat, **{'id': seat_id, 'stadium': match.stadium, 'is_enable': True})
 
         with transaction.atomic():
             if PurchaseMatch.objects.filter(seat=seat, match=match, is_paid=True).exists():
