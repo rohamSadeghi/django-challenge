@@ -1,6 +1,6 @@
 ##About Ticket online
 
-####Ticket online, is a project that let people buy tickets for soccer matches online.
+####Ticket online, is a project that let people buy tickets for volleyball matches online.
 ```
 
 
